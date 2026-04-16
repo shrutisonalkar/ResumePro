@@ -1,0 +1,88 @@
+/* GLOBAL NEON GREEN OVERRIDE #39ff14 */
+:root {
+  --neon-green: #39ff14;
+  --neon-glow: #39ff14aa;
+  --dark-bg: #0a0a0a;
+}
+
+* {
+  color: var(--neon-green) !important;
+  font-family: 'Courier New', monospace !important;
+}
+
+.stApp {
+  background: var(--dark-bg) !important;
+  color: var(--neon-green) !important;
+}
+
+h1, h2, h3, h4, h5, h6, p, div, span, label, li, a, strong, em {
+  color: var(--neon-green) !important;
+}
+
+textarea, input, select {
+  background: rgba(57,255,20,0.1) !important;
+  color: var(--neon-green) !important;
+  border: 1px solid var(--neon-green) !important;
+  border-radius: 4px !important;
+}
+
+textarea::placeholder, input::placeholder {
+  color: var(--neon-glow) !important;
+}
+
+button, .stButton > button {
+  background: linear-gradient(45deg, var(--neon-green), #00ff88) !important;
+  color: #000 !important;
+  border: 1px solid var(--neon-green) !important;
+  box-shadow: 0 0 10px var(--neon-glow) !important;
+}
+
+button:hover {
+  box-shadow: 0 0 20px var(--neon-green) !important;
+}
+
+[data-testid="stSidebar"] {
+  background: rgba(10,10,10,0.95) !important;
+  border-right: 1px solid var(--neon-green) !important;
+}
+
+[data-testid="stSidebar"] * {
+  color: var(--neon-green) !important;
+}
+
+[data-testid="stFileUploader"] label, [data-testid="stTextArea"] label {
+  color: var(--neon-green) !important;
+}
+
+div[data-testid="stDataFrame"] *, table * {
+  color: var(--neon-green) !important;
+}
+
+.stTabs [data-baseweb="tab"] {
+  color: var(--neon-glow) !important;
+}
+
+.stTabs [aria-selected="true"] {
+  color: var(--neon-green) !important;
+  border-bottom-color: var(--neon-green) !important;
+}
+
+/* Metrics */
+[data-testid="metric-container"] * {
+  color: var(--neon-green) !important;
+}
+
+/* Progress */
+.stProgress > div > div > div > div {
+  background: linear-gradient(90deg, var(--neon-green), #00ff88) !important;
+}
+
+/* Ensure ALL Streamlit components are neon green */
+section, article, header, footer, [class*="st-"] {
+  color: var(--neon-green) !important;
+}
+
+hr {
+  border-color: var(--neon-glow) !important;
+}
+
