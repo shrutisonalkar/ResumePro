@@ -1,3 +1,28 @@
+import streamlit as st
+import pdfplumber
+import re
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+from wordcloud import WordCloud
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+from skills import extract_skills
+import datetime
+import json
+
+# Matplotlib backend for Streamlit
+plt.style.use('dark_background')
+plt.rcParams['figure.facecolor'] = '#050C0A'
+plt.rcParams['axes.facecolor'] = '#050C0A'
+
+st.set_page_config(
+    page_title="ResumeAI Pro",
+    page_icon="🤖",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 st.markdown("""
 <style>
 
@@ -31,30 +56,6 @@ div[data-testid="stFileUploader"] button:after {
 
 </style>
 """, unsafe_allow_html=True)
-import streamlit as st
-import pdfplumber
-import re
-import pandas as pd
-import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
-from wordcloud import WordCloud
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-from skills import extract_skills
-import datetime
-import json
-
-# Matplotlib backend for Streamlit
-plt.style.use('dark_background')
-plt.rcParams['figure.facecolor'] = '#050C0A'
-plt.rcParams['axes.facecolor'] = '#050C0A'
-
-st.set_page_config(
-    page_title="ResumeAI Pro",
-    page_icon="🤖",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
 
 # NEON GREEN CYBER THEME CSS (#39ff14) - CLEAN VERSION
 st.markdown("""
