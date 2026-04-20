@@ -39,10 +39,12 @@ st.markdown("""
 }
 
 /* GLOBAL NEON GREEN TEXT */
-*, *::before, *::after {
+* {
     font-family: 'Rajdhani', sans-serif !important;
     color: var(--neon) !important;
 }
+
+/* DO NOT FORCE ::before ::after globally */
 
 .stApp {
     background: var(--bg) !important;
@@ -138,6 +140,11 @@ textarea::placeholder, input::placeholder {
 }
 [data-testid="stFileUploader"] {
     border: 1px dashed var(--neon-border) !important;
+}
+/* FIX uploadupload duplication */
+div[data-testid="stFileUploader"] button::before,
+div[data-testid="stFileUploader"] button::after {
+    content: none !important;
 }
 
 /* PROGRESS */
