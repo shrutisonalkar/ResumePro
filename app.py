@@ -1,3 +1,36 @@
+st.markdown("""
+<style>
+
+/* Remove any injected upload text */
+div[data-testid="stFileUploader"] button::before,
+div[data-testid="stFileUploader"] button::after {
+    content: none !important;
+}
+
+/* Restore original Streamlit text */
+div[data-testid="stFileUploader"] button {
+    font-size: 14px !important;
+}
+
+/* Hide "uploadupload" text bug */
+div[data-testid="stFileUploader"] button span {
+    display: none !important;
+}
+
+/* Add clean custom text */
+div[data-testid="stFileUploader"] button {
+    position: relative;
+}
+
+div[data-testid="stFileUploader"] button:after {
+    content: "UPLOAD" !important;
+    color: #39ff14 !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
 import streamlit as st
 import pdfplumber
 import re
