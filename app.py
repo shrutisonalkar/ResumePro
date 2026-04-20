@@ -23,40 +23,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-st.markdown("""
-<style>
-
-/* Remove any injected upload text */
-div[data-testid="stFileUploader"] button::before,
-div[data-testid="stFileUploader"] button::after {
-    content: none !important;
-}
-
-/* Restore original Streamlit text */
-div[data-testid="stFileUploader"] button {
-    font-size: 14px !important;
-}
-
-/* Hide "uploadupload" text bug */
-div[data-testid="stFileUploader"] button span {
-    display: none !important;
-}
-
-/* Add clean custom text */
-div[data-testid="stFileUploader"] button {
-    position: relative;
-}
-
-div[data-testid="stFileUploader"] button:after {
-    content: "UPLOAD" !important;
-    color: #39ff14 !important;
-    font-weight: bold !important;
-    font-size: 14px !important;
-}
-
-</style>
-""", unsafe_allow_html=True)
-
 # NEON GREEN CYBER THEME CSS (#39ff14) - CLEAN VERSION
 st.markdown("""
 <style>
@@ -193,6 +159,40 @@ div[data-testid="stFileUploader"] button::after {
 }
 </style>
 """, unsafe_allow_html=True)
+st.markdown("""
+<style>
+
+/* Remove any injected upload text */
+div[data-testid="stFileUploader"] button::before,
+div[data-testid="stFileUploader"] button::after {
+    content: none !important;
+}
+
+/* Restore original Streamlit text */
+div[data-testid="stFileUploader"] button {
+    font-size: 14px !important;
+}
+
+/* Hide "uploadupload" text bug */
+div[data-testid="stFileUploader"] button span {
+    display: none !important;
+}
+
+/* Add clean custom text */
+div[data-testid="stFileUploader"] button {
+    position: relative;
+}
+
+div[data-testid="stFileUploader"] button:after {
+    content: "UPLOAD" !important;
+    color: #39ff14 !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
 
 # ORIGINAL FUNCTIONS (UNCHANGED)
 def extract_text_from_pdf(pdf_file):
