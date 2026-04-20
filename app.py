@@ -214,7 +214,8 @@ st.markdown('<div style="font-family:Share Tech Mono,monospace; font-size:12px; 
 col1, col2 = st.columns([1,1])
 
 with col1:
-    uploaded_file = st.file_uploader("📁 RESUME PDF", type="pdf")
+    st.markdown("### 📁 RESUME PDF")
+    uploaded_file = st.file_uploader("", type=["pdf"], label_visibility="collapsed")
 
 with col2:
     job_template = st.selectbox("JOB TEMPLATE", list(TEMPLATES.keys()))
